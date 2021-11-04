@@ -37,7 +37,7 @@ print(f"\n")
 stringa = "Luca corre"
 print(stringa)
 
-stringa_nuova = stringa[0:2] + "F" +stringa[3:]
+stringa_nuova = stringa[:2] + "?" +stringa[3:]
 print(stringa_nuova)
 
 
