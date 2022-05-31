@@ -1,0 +1,22 @@
+import microbit
+from microbit import *
+asseX=""
+while True:
+    pulsante = "none"
+    if microbit.button_a.is_pressed() and microbit.button_b.is_pressed():
+        pulsante = "ab"
+    elif microbit.button_a.is_pressed():
+        pulsante ="a"
+    elif microbit.button_b.is_pressed():
+        pulsante ="b"
+    a = accelerometer.get_x()
+    if a < -500:
+        asseX = "sx"
+    elif a > 500:
+        asseX = "dx"
+    else:
+        asseX = "no"
+        
+    print(asseX,pulsante)
+    
+    microbit.sleep(100)
